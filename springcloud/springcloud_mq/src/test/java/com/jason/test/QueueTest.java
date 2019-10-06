@@ -26,7 +26,10 @@ public class QueueTest {
 	 * 测试消息队列
 	 */
 	@Test
-	public void test1(){
-		this.sender.send("Hello RabbitMQ");
+	public void test1() throws Exception{
+		while(true){
+			Thread.sleep(1000);
+			this.sender.send("Hello RabbitMQ");
+		}
 	}
 }
